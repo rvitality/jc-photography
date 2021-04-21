@@ -1,0 +1,32 @@
+{
+  "name": "jc-photography",
+  "version": "1.0.0",
+  "description": "Juniel Cabo's Personal Photography Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run clean && parcel public/index.html --out-dir development -p 3000",
+    "build": "rimraf ./dist && parcel build public/*.html --out-dir dist --public-url ./",
+    "clean": "rimraf ./development && rimraf ./.cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rvitality/jc-photography.git"
+  },
+  "keywords": [
+    "Photography"
+  ],
+  "author": "Renz Vital",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rvitality/jc-photography/issues"
+  },
+  "homepage": "https://github.com/rvitality/jc-photography#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/plugin-transform-runtime": "^7.13.15",
+    "@babel/runtime-corejs2": "^7.13.17",
+    "parcel-bundler": "^1.12.5",
+    "rimraf": "^3.0.2",
+    "sass": "^1.32.11"
+  }
+}
