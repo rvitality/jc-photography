@@ -1,5 +1,9 @@
-$red: red;
+@use "base/base";
+@use "base/typography";
 
-body{
-    color: red;
-}
+@use "layout/header";
+@use "layout/navigation";
+
+@use "pages/home";
+
+@use "components/hamburger.scss";

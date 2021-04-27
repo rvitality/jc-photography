@@ -2,7 +2,7 @@
   "name": "jc-photography",
   "version": "1.0.0",
   "description": "Juniel Cabo's Personal Photography Website",
-  "main": "index.js",
+  "main": "src/js/app.js",
   "scripts": {
     "dev": "npm run clean && parcel public/index.html --out-dir development -p 3000",
     "build": "rimraf ./dist && parcel build public/*.html --out-dir dist --public-url ./",

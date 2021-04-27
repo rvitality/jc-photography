@@ -1,0 +1,58 @@
+.menu {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__checkbox{
+        display: flex;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        cursor: pointer;
+        opacity: 0; /* hide input */
+        z-index: 9; /* top of the menu */
+    }
+
+    span{
+        width: 1.8rem;
+        height: 2px;
+        margin-bottom: .4rem;
+        background: #fff;
+        border-radius: 4px;
+        -webkit-transition: all .5s cubic-bezier(.08,.81,.87,.71);
+        -moz-transition: all .5s cubic-bezier(.08,.81,.87,.71);
+        -ms-transition: all .5s cubic-bezier(.08,.81,.87,.71);
+        -o-transition: all .5s cubic-bezier(.08,.81,.87,.71);
+        transition: all .5s cubic-bezier(.08,.81,.87,.71);
+    }
+
+    &__line1 {
+        transform-origin: 4px 0px;
+    }
+      
+    &__line3 {
+        transform-origin: bottom right;
+    }
+
+    &__checkbox:checked ~ &__line1 {
+        background-color: #eee;
+        transform: rotate(45deg) translate(4px);
+    }
+    
+    &__checkbox:checked ~ &__line2 {
+        background-color: #eee;  
+        transform: rotate(495deg) translate(2px);  
+    }
+
+    &__checkbox:checked ~ &__line3 {
+        background-color: #eee;
+        transform: rotate(45deg);
+        opacity: 0;
+    }
+}
+  
+  
+
+  

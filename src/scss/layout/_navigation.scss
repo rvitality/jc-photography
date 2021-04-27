@@ -1,0 +1,15 @@
+.nav{
+    position: absolute;
+    width: 100%;
+    padding: 2rem 5rem;
+    z-index: 5 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__brand{
+        color: #fff;
+        text-decoration: none;
+    }
+
+}
