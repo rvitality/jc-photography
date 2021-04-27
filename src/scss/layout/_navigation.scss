@@ -1,4 +1,5 @@
-.nav{
+
+.navigation{
     position: absolute;
     width: 100%;
     padding: 2rem 5rem;
@@ -8,8 +9,20 @@
     justify-content: space-between;
 
     &__brand{
-        color: #fff;
+        font-size: .8rem;
         text-decoration: none;
+        padding: .5rem 1rem;
+        transition: all .3s;
+        background-color: #fff;
+        border: 1px solid #fff;
+        color: #000;
+        
+        &:hover{
+            background-color: #000;
+            border: 1px solid #000;
+            color: #fff;
+        }
+
     }
 
 }

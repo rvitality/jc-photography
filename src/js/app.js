@@ -19,3 +19,11 @@ window.addEventListener("scroll", () => {
 
 });
 
+
+// nav
+const menuButton = document.querySelector(".menu__container");
+const navBackground = document.querySelector(".background");
+
+menuButton.addEventListener("click", e => {
+    navBackground.classList.toggle("enlarged");
+});
