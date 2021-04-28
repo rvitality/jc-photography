@@ -4,6 +4,7 @@
 @use "layout/header";
 @use "layout/navigation";
 @use "layout/social";
+@use "layout/footer";
 
 @use "pages/home";
 
@@ -12,7 +13,7 @@
 @use "components/button";
 @use "components/grid-works";
 @use "components/sub-grid-works";
-@use "components/img-overlay";
+@use "components/form";
 
 @use "abstracts/utilities";
 

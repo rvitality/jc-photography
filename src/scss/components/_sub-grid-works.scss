@@ -6,17 +6,30 @@
     grid-auto-flow: dense;
     gap: 3rem;
     cursor: pointer;
+    overflow: hidden;
+
 
     &__box{
         position: relative;
-        width: 350px;
-        height: 350px;
+        width: auto;
+        height: 300px;
+
+        &::before{
+            content: '';
+            box-shadow: inset 1px 1px 10px 0 #000000;
+            display: block;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
 
         img{
             height: 100%;
             width: 100%;
             object-fit: cover;
             background-size: cover;
+
         }
 
         &:hover .sub-grid-works__overlay::before{
