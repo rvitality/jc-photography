@@ -8,21 +8,55 @@
     align-items: center;
     justify-content: space-between;
 
-    &__brand{
+    &__connect{
         font-size: .8rem;
         text-decoration: none;
         padding: .5rem 1rem;
         transition: all .3s;
         background-color: #fff;
-        border: 1px solid #fff;
+        border: 1px solid transparent;
         color: #000;
+
+        &--dark{
+            transition: all 1s;
+            background: #000;
+            color: #fff;
+        }
         
         &:hover{
             background-color: #000;
-            border: 1px solid #000;
             color: #fff;
         }
 
+    }
+
+    &__nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 0;
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+        &--show{
+            opacity: 1;
+            width: 100%;
+        }
+
+    }
+
+    &__link{
+        font-size: 4rem;
+        color: #333;
+        text-decoration: none;
+        
+        &:hover{
+            color: #000;
+        }
     }
 
 }

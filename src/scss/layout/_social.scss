@@ -9,11 +9,18 @@
     
     &__link{
 
+
         svg{
             width: 18px;
             
             .filling{
                 fill: #ddd;
+
+                &.dark{
+                    transition: all 1s;
+                    fill: #000;
+                }
+
             }
 
         }

@@ -22,8 +22,20 @@ window.addEventListener("scroll", () => {
 
 // nav
 const menuButton = document.querySelector(".menu__container");
+const menuBg = document.querySelector(".menu");
 const navBackground = document.querySelector(".background");
 
+const navConnect = document.querySelector(".navigation__connect")
+const navList = document.querySelector(".navigation__nav");
+
+const socialLinks = document.querySelectorAll(".filling");
+
 menuButton.addEventListener("click", e => {
-    navBackground.classList.toggle("enlarged");
+    if (!e.target.classList.contains("background")) {
+        navBackground.classList.toggle("enlarged");
+        menuBg.classList.toggle("menu--dark");
+        navConnect.classList.toggle("navigation__connect--dark");
+        socialLinks.forEach(el => el.classList.toggle("dark"));
+        navList.classList.toggle("navigation__nav--show");
+    }
 });
