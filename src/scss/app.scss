@@ -7,4 +7,12 @@
 
 @use "pages/home";
 
-@use "components/hamburger.scss";
+@use "components/_hamburger";
+@use "components/composition";
+@use "components/button";
+@use "components/grid-works";
+@use "components/sub-grid-works";
+@use "components/img-overlay";
+
+@use "abstracts/utilities";
+

@@ -1,6 +1,6 @@
 
 .navigation{
-    position: absolute;
+    position: fixed;
     width: 100%;
     padding: 2rem 5rem;
     z-index: 5 ;
@@ -16,6 +16,7 @@
         background-color: #fff;
         border: 1px solid transparent;
         color: #000;
+        z-index: 9;
 
         &--dark{
             transition: all 1s;
@@ -24,8 +25,8 @@
         }
         
         &:hover{
-            background-color: #000;
-            color: #fff;
+            background-color: #111;
+            color: #eee;
         }
 
     }
@@ -40,8 +41,9 @@
         left: 0;
         opacity: 0;
         width: 0;
+        overflow: hidden;
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
+        
         &--show{
             opacity: 1;
             width: 100%;

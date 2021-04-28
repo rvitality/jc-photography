@@ -1,0 +1,64 @@
+.sub-grid-works{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    grid-auto-flow: dense;
+    gap: 3rem;
+    cursor: pointer;
+
+    &__box{
+        position: relative;
+        width: 350px;
+        height: 350px;
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            background-size: cover;
+        }
+
+        &:hover .sub-grid-works__overlay::before{
+            opacity: .2;
+        }
+
+        &:hover .sub-grid-works__overlay img{
+            opacity: 1;
+        }
+
+    }
+
+    &__overlay{
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            transition: .3s ease;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+        }
+
+        img{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 34px;
+            height: 34px;
+            z-index: 999;
+            opacity: 0;
+        }
+
+
+    }
+
+}

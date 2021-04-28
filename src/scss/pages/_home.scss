@@ -1,5 +1,25 @@
 .section-about{
-    padding: 15rem 3rem 5rem 3rem;
+    padding: 9rem;
+    background-color: #000;
+    color: #fff;
+
+    &__row{
+        display: flex;
+    }
+
+    &__col:first-child{
+        margin-right: 3rem;
+        flex: 20%;
+    }
+
+    &__col:last-child{
+        flex: 20%;
+    }
+
+}
+
+.section-works{
+    padding: 6rem 9rem 9rem 9rem;
     background-color: #000;
     color: #fff;
 }
