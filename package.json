@@ -5,7 +5,7 @@
   "main": "src/js/app.js",
   "scripts": {
     "dev": "npm run clean && parcel public/index.html --out-dir development -p 3000",
-    "build": "rimraf ./dist && parcel build public/*.html --out-dir dist --public-url ./",
+    "build": "rimraf ./docs && parcel build --no-minify public/*.html --out-dir docs --public-url ./",
     "clean": "rimraf ./development && rimraf ./.cache"
   },
   "repository": {
