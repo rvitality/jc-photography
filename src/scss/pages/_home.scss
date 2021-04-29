@@ -1,3 +1,5 @@
+@use  "../abstracts/mixins" as *;
+
 section{
     background-color: #000;
     color: #fff;
@@ -5,29 +7,36 @@ section{
 
 
 .section-about{
-    padding: 9rem;
+    padding: 6rem 9rem 6rem 9rem;
+    
+    @include respond(phone) {
+        padding: 6rem 9rem 30rem 9rem;
+    }
 
     &__row{
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+            gap: 5rem;
+        }
     }
 
     &__col:first-child{
         margin-right: 3rem;
-        flex: 20%;
+        
     }
 
-    &__col:last-child{
-        flex: 20%;
-    }
 
 }
 
 .section-works{
-    padding: 6rem 9rem 9rem 9rem;
+    padding: 3rem 9rem 9rem 9rem;
 }
 
 .section-contact{
-    padding: 6rem 9rem 9rem 9rem;
+    padding: 3rem 9rem 9rem 9rem;
 }
 
 .book {
@@ -41,8 +50,32 @@ section{
     object-fit: cover;
     border-radius: 3px;
 
+    @include respond(tab-land) {
+        background-image: linear-gradient(105deg, 
+        rgba(#fff, .3) 0%,
+        rgba(#fff, .3) 65%,
+        transparent 65%) ,
+        url(../../src/img/book-img.jpg);
+    }
+
+    @include respond(phone) {
+        background-image: linear-gradient(to right, 
+        rgba(#fff, .3) 0%,
+        rgba(#fff, .3) 100%),
+        url(../../src/img/book-img.jpg);
+    }
+
     &__form {
         width: 40%;
         padding: 6rem 3rem 6rem 6rem;
+
+        @include respond(tab-land) {
+            width: 60%;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+        }
+
     }
 }

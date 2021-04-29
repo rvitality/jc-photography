@@ -1,3 +1,5 @@
+@use  "../abstracts/mixins" as *;
+
 .sub-grid-works{
     position: relative;
     display: grid;
@@ -8,6 +10,14 @@
     cursor: pointer;
     overflow: hidden;
 
+    @include respond(tab-port) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(phone) {
+        grid-template-columns: 1fr;
+    }
+    
 
     &__box{
         position: relative;

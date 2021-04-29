@@ -1,3 +1,5 @@
+@use  "../abstracts/mixins" as *;
+
 .menu {
     cursor: pointer;
     background: #fff;
@@ -10,6 +12,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include respond(tab-land) { // width < 1200?
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    @include respond(tab-port) { // width < 900?
+        width: 3.3rem;
+        height: 3.3rem;
+    }
+
+    @include respond(phone) { // width < 600?
+        width: 4rem;
+        height: 4rem;
+    }
 
     &--dark{
         transition: all 1s;
@@ -24,6 +41,12 @@
         cursor: pointer;
         opacity: 0; /* hide input */
         z-index: 1; /* top of the menu */
+
+    
+        @include respond(tab-port) { // width < 900?
+            width: 40px;
+            height: 40px;
+        }
     }
 
     span{
@@ -37,6 +60,18 @@
         -ms-transition: all .5s cubic-bezier(.08,.81,.87,.71);
         -o-transition: all .5s cubic-bezier(.08,.81,.87,.71);
         transition: all .5s cubic-bezier(.08,.81,.87,.71);
+
+        
+        @include respond(tab-land) { // width < 1200?
+            width: 1.3rem;
+        }
+    
+        @include respond(tab-port) { // width < 900?
+        }
+        
+        @include respond(phone) {
+            width: 1.5rem;
+        }
     }
 
     &__line1 {
@@ -50,11 +85,27 @@
     &__checkbox:checked ~ &__line1 {
         background-color: #fff;
         transform: rotate(45deg) translate(3px);
+
+          
+        @include respond(tab-port) { // width < 900?
+            transform: rotate(45deg) translate(3px);
+        }
+        
+        @include respond(phone) {
+        }
     }
     
     &__checkbox:checked ~ &__line2 {
         background-color: #fff;  
         transform: rotate(495deg) translate(1px);  
+
+        @include respond(tab-port) { // width < 900?
+            transform: rotate(495deg) translate(0);
+        }
+        
+        @include respond(phone) {
+            transform: rotate(495deg) translate(-1px);
+        }
     }
 
     &__checkbox:checked ~ &__line3 {

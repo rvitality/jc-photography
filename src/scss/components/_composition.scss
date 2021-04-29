@@ -1,3 +1,5 @@
+@use  "../abstracts/mixins" as *;
+
 .composition{
     position: relative;
 
@@ -10,19 +12,43 @@
         transition: all .2s;
         outline-offset: 2rem;
 
+        @include respond(tab-port) { // width < 1200?
+            width: 50%;
+        }
+
+        @include respond(phone) { // width < 1200?
+        }
+
         &--p1{
             top: -2rem;
-            left: 0;
+            // left: 0;
+            left: 10%;
+
+            @include respond(phone) { // width < 1200?
+                left: 35%;
+                transform: translateX(-50%);
+            }
         }
     
         &--p2{ 
             top: 2rem;
             right: 0;
+
+            @include respond(phone) { // width < 1200?
+                left: 80%;
+                transform: translateX(-50%);
+            }
         }
     
         &--p3{
             top: 7rem;
-            left: 20%;
+            left: 30%;
+
+            @include respond(phone) { // width < 1200?
+                top: 5rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
 
         }
 
